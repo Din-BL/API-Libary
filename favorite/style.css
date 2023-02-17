@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 105, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+article {
+  background-color: white;
+  padding: 28px;
+  border-radius: 15px;
+}
+
+th,
+td {
+  padding: 5px 45px;
+}
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+thead {
+  background-color: black;
+  color: white;
+}
+
+header {
+  height: 40px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+aside {
+  position: absolute;
+  padding: 10px;
+  background-color: black;
+  border-radius: 12px;
+}
+.home-page {
+  color: white;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
