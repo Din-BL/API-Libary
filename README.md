@@ -1,5 +1,6 @@
-<img width="506" alt="צילום מסך 2023-02-17 051302" src="https://user-images.githubusercontent.com/93730629/219540612-66940331-896b-40f7-aee9-bc99f0d776a7.png">
-<img width="580" alt="צילום מסך 2023-02-17 051339" src="https://user-images.githubusercontent.com/93730629/219540616-466fc19c-af55-4265-8d58-f809229bc87f.png">
+<div style="display: flex;">
+<img width="394" height="260" alt="צילום מסך 2023-02-17 051302" src="https://user-images.githubusercontent.com/93730629/219540612-66940331-896b-40f7-aee9-bc99f0d776a7.png">
+<img width="394" height="260" alt="צילום מסך 2023-02-17 051339" src="https://user-images.githubusercontent.com/93730629/219540616-466fc19c-af55-4265-8d58-f809229bc87f.png">
 
 # API-Libary
 So, I recently completed a vanilla JS project that lets the user choose their favorite TV show from an API stock using HTML, CSS, JS, and OOP principles with classes. The project also uses AJAX and local storage to store user preferences.
