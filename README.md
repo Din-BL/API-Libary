@@ -1,6 +1,7 @@
-https://github.com/DinBoy5/API-Libary/assets/93730629/3561966a-f0c7-4f45-a1b5-bc94c9896699
+https://github.com/DinBoy5/API-Libary/assets/93730629/f9659326-6d46-4260-bcde-deb611bcaaf7
 
 # API-Libary
+
 So, I recently completed a vanilla JS project that lets the user choose their favorite TV show from an API stock using HTML, CSS, JS, and OOP principles with classes. The project also uses AJAX and local storage to store user preferences.
 
 The project was a great way for me to practice working with APIs and manipulating data in JavaScript. To start, I used HTML and CSS to create a simple, clean interface that lets the user choose their favorite TV show from a dropdown menu.
