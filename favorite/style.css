@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -23,10 +24,12 @@ th,
 td {
   padding: 5px 45px;
 }
+
 td {
   border: 1px solid black;
   text-align: center;
 }
+
 thead {
   background-color: black;
   color: white;
@@ -44,10 +47,19 @@ aside {
   background-color: black;
   border-radius: 12px;
 }
+
 .home-page {
   color: white;
   text-decoration: none;
 }
+
 a {
   text-decoration: none;
+}
+
+.error{
+   background-color: white;
+   padding: 25px;
+   border-radius: 25px;
+   font-family: cursive;
 }

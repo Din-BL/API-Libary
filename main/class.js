@@ -1,9 +1,8 @@
 export { MakeObj, container };
 
-const container = document.createElement("div");
-document.body.append(container);
-let counter = 0;
 let favorite = document.querySelector(".favorite");
+let container = document.querySelector(".grid");
+let counter = 0;
 let favoritePic = [];
 
 class MakeObj {
@@ -24,7 +23,6 @@ class MakeObj {
         let myFavorite = document.createElement("span");
         imgContainer.append(myFavorite);
       }
-
       if (imgContainer.childNodes.length < 3) {
         const selected = document.createElement("span");
         selected.classList.add("span");

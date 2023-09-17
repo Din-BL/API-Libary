@@ -2,27 +2,25 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(./img/sarah-shull-pBYgLDVGmkM-unsplash.jpg);
+  background-image: url('./img/TvShow.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 130rem;
-  /* height: 100dvh; */
 }
-.heading {
-  border: 4px solid black;
-  border-radius: 22px;
-  width: 45rem;
-  padding: 25px;
+.searchBox{
+  opacity: 0.9;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 15px;
+    margin-bottom: 200px;
 }
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 14rem);
+  display: none;
+  grid-template-columns: repeat(3, 190px);
+  grid-template-rows: 275px 275px 275px 10px;
   justify-content: center;
-  gap: 40px;
-  margin-top: 18rem;
-  padding-top: 10rem;
-  margin-left: 100px;
+  gap: 35px;
+  margin-left: 20px;
 }
 .span {
   position: relative;
@@ -32,7 +30,6 @@ body {
   background-color: rgb(25, 0, 255);
   padding: 10px;
   border-radius: 15px;
-  transition: 2s;
 }
 .frame {
   border: 3px solid black;
