@@ -11,6 +11,7 @@ body {
   opacity: 0.9;
     border-radius: 10px;
     max-width: 260px;
+    width: 260px;
     padding: 15px;
     margin-bottom: 165px;
 }
@@ -42,7 +43,7 @@ body {
 @media (max-width: 990px) {
   .grid{
     grid-template-columns: repeat(2, 102px);
-    grid-template-rows: 158px 158px 158px 10px;
+    grid-template-rows: 158px 158px 158px 158px 10px;
     margin-left: -18px;
   }
   .frame{
@@ -57,5 +58,8 @@ body {
   }
   .searchBox{
     margin-bottom: 25px;
+  }
+  body{
+    min-height: 100vh;
   }
 }
