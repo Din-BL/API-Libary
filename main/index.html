@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="img/tv-show.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <script type="module" src="app.js"></script>
   <link rel="stylesheet" href="style.css" />
@@ -19,8 +20,13 @@
       <p class="lead text-light">You have <span class="favorite">0</span> favorite shows</p>
       <form id="searchForm">
     </header>
-    <input style="padding: 4px 0 8px 10px; border-radius: 7px" type="text" placeholder="Type Your TV Show"
-      name="query" />
+    <div class=" d-flex justify-content-center mb-1">
+      <div style="width: 228px;" class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"> <i class="bi bi-search"></i></span>
+        <input type="search" class="form-control" placeholder="Type Your TV Show" aria-label="searchTV"
+          aria-describedby="addon-wrapping" name="query">
+      </div>
+    </div>
     <button style="background-color: rgb(180, 141, 81)" class="btn btn-secondary submit">Submit</button>
     <a class="btn btn-secondary" href="../favorite/favorite.html">Favorite</a>
     <button class="btn btn-danger" id="reset">Reset</button>

@@ -10,9 +10,9 @@ body {
 .searchBox{
   opacity: 0.9;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 260px;
     padding: 15px;
-    margin-bottom: 200px;
+    margin-bottom: 165px;
 }
 .grid {
   display: none;
@@ -35,4 +35,26 @@ body {
   border: 3px solid black;
   border-radius: 10px;
   cursor: pointer;
+}
+
+/* Media Query */
+
+@media (max-width: 990px) {
+  .grid{
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 158px 158px 158px 10px;
+  }
+  .frame{
+    height: 180px;
+  }
+  .span{
+    bottom: 100px;
+    left: 33px;
+    font-size: small;
+    padding: 7px;
+    border-radius: 10px;
+  }
+  .searchBox{
+    margin-bottom: 25px;
+  }
 }

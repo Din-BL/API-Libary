@@ -9,7 +9,6 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 105, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -18,21 +17,6 @@ article {
   background-color: white;
   padding: 28px;
   border-radius: 15px;
-}
-
-th,
-td {
-  padding: 5px 45px;
-}
-
-td {
-  border: 1px solid black;
-  text-align: center;
-}
-
-thead {
-  background-color: black;
-  color: white;
 }
 
 header {
@@ -62,4 +46,18 @@ a {
    padding: 25px;
    border-radius: 25px;
    font-family: cursive;
+   font-size: x-large;
+
+}
+
+/* Media Query */
+
+@media (max-width: 990px) {
+ .error{
+  font-size: large;
+ }
+ main{
+  display: block;
+  height: 70vh;
+ }
 }

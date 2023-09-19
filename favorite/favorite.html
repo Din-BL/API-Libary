@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="../main/img/tv-show.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
   <script src="favorite.js" defer></script>
   <title>favorite</title>
@@ -20,17 +21,19 @@
       <header>
         <h1>TV Shows</h1>
       </header>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>type</th>
-            <th>language</th>
-            <th>rating</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-hover mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">type</th>
+              <th scope="col">language</th>
+              <th scope="col">rating</th>
+              <th scope="col">Link</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
     </article>
   </main>
 </body>
