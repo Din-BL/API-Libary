@@ -41,8 +41,9 @@ body {
 
 @media (max-width: 990px) {
   .grid{
-    grid-template-columns: repeat(2, 130px);
+    grid-template-columns: repeat(2, 102px);
     grid-template-rows: 158px 158px 158px 10px;
+    margin-left: -18px;
   }
   .frame{
     height: 180px;

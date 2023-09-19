@@ -8,7 +8,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 105, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -47,7 +46,6 @@ a {
    border-radius: 25px;
    font-family: cursive;
    font-size: x-large;
-
 }
 
 /* Media Query */
@@ -58,6 +56,17 @@ a {
  }
  main{
   display: block;
-  height: 70vh;
+  padding: 50px 0px;
+ }
+ aside{
+  font-size: x-small;
+  padding: 5px;
+  border-radius: 8px;
+ }
+}
+
+@media (min-width: 990px) {
+ main{
+  height: 100vh;
  }
 }
