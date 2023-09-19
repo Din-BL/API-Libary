@@ -7,6 +7,21 @@ const submit = document.querySelector(".submit");
 const favorite = document.querySelector(".favorite");
 const bodyElement = document.body;
 
+window.addEventListener('resize', handleResize);
+
+function handleResize() {
+  const bodyStyle = window.getComputedStyle(bodyElement);
+  const backgroundImage = bodyStyle.getPropertyValue('background-image');
+  const screenWidth = window.innerWidth;
+  if (!backgroundImage.includes('TvShow')) {
+    if (screenWidth > 990) {
+      bodyElement.style.backgroundImage = 'url("./img/frame.jpg")';
+    } else {
+      bodyElement.style.backgroundImage = 'url("./img/SmallBG.jpg")';
+    }
+  }
+}
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   if (input.value !== "") {
@@ -21,7 +36,7 @@ form.addEventListener("submit", async function (e) {
     } else {
       bodyElement.style.backgroundImage = 'url("./img/SmallBG.jpg")';
     }
-    const res = await axios.get(`http://api.tvmaze.com/search/shows`, config);
+    const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     const apiData = res.data;
     container.style.display = 'grid'
     window.location.href = "#shows";

@@ -8,7 +8,7 @@ const main = document.querySelector("main");
 
 const getData = async () => {
   try {
-    const data = await fetch(`http://api.tvmaze.com/search/shows?q=${query.params.q}`);
+    const data = await fetch(`https://api.tvmaze.com/search/shows?q=${query.params.q}`);
     const parsed = await data.json();
     const newData = filteredData(parsed, picId);
     for (const data of newData) {
