@@ -52,7 +52,7 @@ const createObj = (data) => {
     if (index.show.image !== null) {
       const newObj = new MakeObj(index.show.image.medium);
       newObj.render();
-      if (flag > 8) {
+      if (flag > 7) {
         break;
       }
     } else continue;
