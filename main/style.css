@@ -37,6 +37,13 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+.btn{
+  width: 55px;
+}
+.btnGroup{
+  width: 223px;
+  text-align: end;
+}
 
 /* Media Query */
 
