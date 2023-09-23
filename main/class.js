@@ -1,14 +1,23 @@
 export { MakeObj, container };
 
 let favorite = document.querySelector(".favorite");
+const favoriteLink = document.querySelector("#favoriteLink");
 let container = document.querySelector(".grid");
 let counter = 0;
 let favoritePic = [];
+
+favoriteLink.addEventListener('click', () => {
+  if (favoritePic.length > 0) {
+    const stringify = JSON.stringify(favoritePic);
+    localStorage.setItem("favorite", stringify);
+  }
+});
 
 class MakeObj {
   constructor(img) {
     this.img = img;
   }
+
   render() {
     const imgContainer = document.createElement("div");
     const myImg = document.createElement("img");
@@ -20,19 +29,17 @@ class MakeObj {
       if (imgContainer.childNodes.length < 2) {
         counter++;
         favorite.innerText = counter;
-        let myFavorite = document.createElement("span");
-        imgContainer.append(myFavorite);
-      }
-      if (imgContainer.childNodes.length < 3) {
         const selected = document.createElement("span");
         selected.classList.add("span");
         selected.innerText = "Selected";
         imgContainer.append(selected);
+        favoritePic.push(e.target.src);
+      } else {
+        counter--;
+        favorite.innerText = counter;
+        imgContainer.children[1].remove()
+        favoritePic = favoritePic.filter(show => show !== e.target.src);
       }
-      let selectedPic = e.target.src;
-      favoritePic.push(selectedPic);
-      let stringify = JSON.stringify(favoritePic);
-      localStorage.setItem("favorite", stringify);
     });
   }
 }

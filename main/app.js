@@ -24,6 +24,7 @@ function handleResize() {
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
+  localStorage.clear()
   if (input.value !== "") {
     submit.disabled = true;
     const searchTerm = form.elements.query.value;
