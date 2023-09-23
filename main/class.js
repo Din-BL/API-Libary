@@ -35,10 +35,15 @@ class MakeObj {
         imgContainer.append(selected);
         favoritePic.push(e.target.src);
       } else {
+        if (e.target.tagName.toLowerCase() === 'span') {
+          const parent = e.target.parentNode
+          favoritePic = favoritePic.filter(show => show !== parent.childNodes[0].src);
+        } else {
+          favoritePic = favoritePic.filter(show => show !== e.target.src);
+        }
         counter--;
         favorite.innerText = counter;
         imgContainer.children[1].remove()
-        favoritePic = favoritePic.filter(show => show !== e.target.src);
       }
     });
   }
