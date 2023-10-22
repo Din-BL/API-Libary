@@ -1,16 +1,15 @@
-let storedPic = localStorage.getItem("favorite");
-let queryString = localStorage.getItem("queryString");
-let picId = JSON.parse(storedPic);
-let query = JSON.parse(queryString);
+const storedPic = localStorage.getItem("favorite");
+const picId = JSON.parse(storedPic);
+const query = localStorage.getItem("query");
 const table = document.querySelector("table");
 const article = document.querySelector("article");
 const main = document.querySelector("main");
 
 const getData = async () => {
   try {
-    const data = await fetch(`https://api.tvmaze.com/search/shows?q=${query.params.q}`);
-    const parsed = await data.json();
-    const newData = filteredData(parsed, picId);
+    const res = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
+    const data = await res.json();
+    const newData = filteredData(data, picId);
     for (const data of newData) {
       const tr = document.createElement("tr");
       tr.innerHTML = `

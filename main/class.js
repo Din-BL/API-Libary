@@ -1,14 +1,14 @@
 export { MakeObj, container };
 
-let favorite = document.querySelector(".favorite");
 const favoriteLink = document.querySelector("#favoriteLink");
-let container = document.querySelector(".grid");
+const container = document.querySelector(".grid");
+const favorite = document.querySelector(".favorite");
 let counter = 0;
-let favoritePic = [];
+let favoriteShow = [];
 
 favoriteLink.addEventListener('click', () => {
-  if (favoritePic.length > 0) {
-    const stringify = JSON.stringify(favoritePic);
+  if (favoriteShow.length > 0) {
+    const stringify = JSON.stringify(favoriteShow);
     localStorage.setItem("favorite", stringify);
   }
 });
@@ -17,14 +17,14 @@ class MakeObj {
   constructor(img) {
     this.img = img;
   }
-
   render() {
     const imgContainer = document.createElement("div");
+    container.append(imgContainer);
     const myImg = document.createElement("img");
     myImg.classList.add("frame");
     myImg.src = this.img;
-    container.append(imgContainer);
     imgContainer.append(myImg);
+    // Pick favorite show
     imgContainer.addEventListener("click", (e) => {
       if (imgContainer.childNodes.length < 2) {
         counter++;
@@ -33,13 +33,13 @@ class MakeObj {
         selected.classList.add("span");
         selected.innerText = "Selected";
         imgContainer.append(selected);
-        favoritePic.push(e.target.src);
+        favoriteShow.push(e.target.src);
       } else {
         if (e.target.tagName.toLowerCase() === 'span') {
           const parent = e.target.parentNode
-          favoritePic = favoritePic.filter(show => show !== parent.childNodes[0].src);
+          favoriteShow = favoriteShow.filter(show => show !== parent.childNodes[0].src);
         } else {
-          favoritePic = favoritePic.filter(show => show !== e.target.src);
+          favoriteShow = favoriteShow.filter(show => show !== e.target.src);
         }
         counter--;
         favorite.innerText = counter;

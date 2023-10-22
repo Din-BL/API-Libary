@@ -41,33 +41,35 @@ a {
   text-decoration: none;
 }
 
-.error{
-   background-color: white;
-   padding: 25px;
-   border-radius: 25px;
-   font-family: cursive;
-   font-size: x-large;
+.error {
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+  font-family: cursive;
+  font-size: x-large;
 }
 
 /* Media Query */
 
 @media (max-width: 990px) {
- .error{
-  font-size: large;
- }
- main{
-  display: block;
-  padding-top: 150px;
-}
- aside{
-  font-size: x-small;
-  padding: 5px;
-  border-radius: 8px;
- }
+  .error {
+    font-size: large;
+  }
+
+  main {
+    display: block;
+    padding-top: 150px;
+  }
+
+  aside {
+    font-size: x-small;
+    padding: 5px;
+    border-radius: 8px;
+  }
 }
 
 @media (min-width: 990px) {
- main{
-  height: 100vh;
- }
+  main {
+    height: 100vh;
+  }
 }

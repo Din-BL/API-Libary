@@ -1,28 +1,33 @@
-html {
+* {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  background-image: url('./img/TvShow.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('./assets/TvShow.jpg') center no-repeat;
   background-size: cover;
 }
-.searchBox{
+
+.searchBox {
   opacity: 0.9;
-    border-radius: 10px;
-    max-width: 260px;
-    width: 260px;
-    padding: 15px;
-    margin-bottom: 165px;
+  border-radius: 10px;
+  max-width: 260px;
+  width: 260px;
+  padding: 15px;
+  margin-bottom: 165px;
 }
+
 .grid {
   display: none;
   grid-template-columns: repeat(3, 190px);
-  grid-template-rows: 275px 275px 275px 10px;
+  grid-template-rows: 270px 270px 270px 5px;
   justify-content: center;
   gap: 35px;
   margin-left: 20px;
 }
+
 .span {
   position: relative;
   bottom: 150px;
@@ -33,15 +38,18 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
+
 .frame {
   border: 3px solid black;
   border-radius: 10px;
   cursor: pointer;
 }
-.btn{
+
+.btn {
   width: 55px;
 }
-.btnGroup{
+
+.btnGroup {
   width: 223px;
   text-align: end;
 }
@@ -49,25 +57,29 @@ body {
 /* Media Query */
 
 @media (max-width: 990px) {
-  .grid{
+  .grid {
     grid-template-columns: repeat(2, 102px);
     grid-template-rows: 158px 158px 158px 158px 10px;
     margin-left: -18px;
   }
-  .frame{
+
+  .frame {
     height: 180px;
   }
-  .span{
+
+  .span {
     bottom: 100px;
     left: 33px;
     font-size: small;
     padding: 7px;
     border-radius: 10px;
   }
-  .searchBox{
+
+  .searchBox {
     margin-bottom: 25px;
   }
-  body{
-    min-height: 100vh;
+
+  body {
+    min-height: 100dvh;
   }
 }
