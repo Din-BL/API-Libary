@@ -9,31 +9,32 @@ const getData = async () => {
   try {
     const res = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
     const data = await res.json();
-    const newData = filteredData(data, picId);
-    for (const data of newData) {
+    const favoriteData = filteredData(data, picId);
+    for (const data of favoriteData) {
       const tr = document.createElement("tr");
       tr.innerHTML = `
       <tbody>
       <td>${data.show.name}</td>
       <td>${data.show.type}</td>
       <td>${data.show.language}</td>
-      <td>${data.show.rating.average ? data.show.rating.average : "No Data Available"}</td>
+      <td>${data.show.rating.average ? data.show.rating.average : "No data available"}</td>
       <td><a href="${data.show.url}">Details</a></td>
       </tbody>`;
       table.append(tr);
     }
   } catch (error) {
     article.remove()
-    const Error = document.createElement("h1");
+    const Error = document.createElement("div");
     Error.innerHTML = 'No TV Shows Available'
-    Error.className = 'text-center error'
+    Error.className = 'text-center'
+    Error.style.fontFamily = 'cursive'
     main.append(Error);
   }
 };
 
 const filteredData = (api, imgList) => {
-  const newData = api.filter((obj) => {
-    if (obj.show.image !== null) {
+  return api.filter(obj => {
+    if (obj.show.image) {
       for (const img of imgList) {
         if (obj.show.image.medium === img) {
           return obj.show.image.medium;
@@ -41,7 +42,6 @@ const filteredData = (api, imgList) => {
       }
     }
   });
-  return newData;
 };
 
 getData();

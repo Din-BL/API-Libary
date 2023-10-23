@@ -5,18 +5,23 @@
 }
 
 main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 105, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  height: 100dvh;
+  background-image: url('../main/assets/FavoriteBG.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 article {
+  min-width: 480px;
   background-color: white;
-  padding: 28px;
+  padding: 20px 10px 5px 10px;
   border-radius: 15px;
+  position: absolute;
+  top: 85px;
+  right: 345px;
+  border: 1px solid black;
 }
 
 header {
@@ -27,49 +32,20 @@ header {
 
 aside {
   position: absolute;
-  padding: 10px;
   background-color: black;
-  border-radius: 12px;
 }
 
-.home-page {
+.link {
   color: white;
   text-decoration: none;
-}
-
-a {
+  font-family: auto;
   text-decoration: none;
-}
-
-.error {
-  background-color: white;
-  padding: 25px;
-  border-radius: 25px;
-  font-family: cursive;
-  font-size: x-large;
 }
 
 /* Media Query */
 
 @media (max-width: 990px) {
-  .error {
-    font-size: large;
-  }
-
-  main {
-    display: block;
-    padding-top: 150px;
-  }
-
-  aside {
-    font-size: x-small;
-    padding: 5px;
-    border-radius: 8px;
-  }
-}
-
-@media (min-width: 990px) {
-  main {
-    height: 100vh;
+  article {
+    position: static;
   }
 }

@@ -1,4 +1,4 @@
-import { MakeObj, container } from "./class.js";
+import { MakeObj, container, resetShows } from "./class.js";
 
 const form = document.querySelector("form");
 const reset = document.querySelector("#reset");
@@ -40,6 +40,7 @@ reset.addEventListener("click", () => {
   submit.disabled = false;
   flag = 0;
   localStorage.clear()
+  resetShows()
 });
 
 const bodyBG = () => bodyElement.style.backgroundImage = window.innerWidth > 990 ? 'url("./assets/frame.jpg")' : 'url("./assets/SmallBG.jpg")'

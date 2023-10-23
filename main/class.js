@@ -1,8 +1,9 @@
-export { MakeObj, container };
+export { MakeObj, container, resetShows };
 
 const favoriteLink = document.querySelector("#favoriteLink");
 const container = document.querySelector(".grid");
 const favorite = document.querySelector(".favorite");
+const resetShows = () => favoriteShow = []
 let counter = 0;
 let favoriteShow = [];
 
@@ -12,6 +13,7 @@ favoriteLink.addEventListener('click', () => {
     localStorage.setItem("favorite", stringify);
   }
 });
+
 
 class MakeObj {
   constructor(img) {
