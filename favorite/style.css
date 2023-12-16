@@ -10,7 +10,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 article {
@@ -26,7 +26,7 @@ article {
 header {
   height: 40px;
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 aside {
