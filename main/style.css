@@ -10,13 +10,17 @@ body {
   background-size: cover;
 }
 
+form {
+  background: rgb(189, 184, 178);
+  background: linear-gradient(12deg, rgba(189, 184, 178, 0) 0%, rgba(0, 0, 0, 0.34234943977591037) 40%);
+  padding: 3px;
+  border-radius: 8px;
+}
+
 .searchBox {
-  background-color: rgba(56, 60, 68, 0.3);
-  border-radius: 10px;
-  max-width: 260px;
   width: 260px;
-  padding: 8px;
-  margin-bottom: 215px;
+  padding-top: 8px;
+  margin-bottom: 225px;
 }
 
 .grid {
@@ -52,6 +56,12 @@ body {
 .btnGroup {
   width: 223px;
   text-align: end;
+}
+
+.favorite {
+  padding: 1px 0px 8px 17px;
+  background-color: rgba(56, 60, 68, 0.3);
+  border-radius: 3px;
 }
 
 /* Media Query */
